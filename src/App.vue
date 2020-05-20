@@ -15,19 +15,22 @@
 </div>
 </template>
 <script>
-new Vue({
-   data: {
-     name:'',
-     currencyfrom : [
-       {name:"USD", money:"US Dollar"},
-       {name:"EUR", money:"Euro"},
-       {name:"INR", money:"Indian Rupee"},
-       {name:"BHD", money:"Bahraini Dinar"}
-       ],
-     convertfrom: "INR",
-     convertto:"USD",
-     amount :""
-   },
+export default {
+     data(){
+       return{
+        name:'',
+        currencyfrom : [
+          {name:"USD", money:"US Dollar"},
+          {name:"EUR", money:"Euro"},
+          {name:"INR", money:"Indian Rupee"},
+          {name:"BHD", money:"Bahraini Dinar"}
+          ],
+        convertfrom: "INR",
+        convertto:"USD",
+        amount :""
+       };
+     },
+     
    computed :{
      finalamount:function() {
        var to = this.convertto;
@@ -94,5 +97,5 @@ new Vue({
        return final;
      }
    }
- });
-
+  };
+</script>
